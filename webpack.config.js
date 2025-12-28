@@ -34,10 +34,8 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
-    '@wordpress/element': 'wp.element',
-    '@wordpress/components': 'wp.components',
-    '@wordpress/i18n': 'wp.i18n',
+    '@wordpress/element': ['wp', 'element'],
+    '@wordpress/components': ['wp', 'components'],
+    '@wordpress/i18n': ['wp', 'i18n'],
   },
 };

@@ -1,5 +1,5 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
+import { createElement } from '@wordpress/element';
+import { createRoot } from '@wordpress/element';
 import App from './App';
 import './styles.css';
 
@@ -11,6 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const root = createRoot(rootElement);
     const page = rootElement.getAttribute('data-page');
     
-    root.render(<App page={page} />);
+    root.render(createElement(App, { page }));
   }
 });

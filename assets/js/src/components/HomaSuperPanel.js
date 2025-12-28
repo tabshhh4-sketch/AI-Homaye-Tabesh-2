@@ -1,4 +1,4 @@
-import React from 'react';
+import { createElement } from '@wordpress/element';
 
 const HomaSuperPanel = ({ page }) => {
   const getPageContent = () => {
@@ -37,30 +37,34 @@ const HomaSuperPanel = ({ page }) => {
 
     const info = pageInfo[pageName] || { title: 'صفحه', description: '' };
 
-    return (
-      <div className="homaye-tabesh-card">
-        <h2>{info.title}</h2>
-        <p>{info.description}</p>
-        <div className="homaye-tabesh-status active">فعال</div>
-        <p style={{ marginTop: '20px', color: '#666' }}>
-          این بخش در حال توسعه است و قابلیت‌های آن در نسخه‌های آینده اضافه خواهند شد.
-        </p>
-      </div>
+    return createElement(
+      'div',
+      { className: 'homaye-tabesh-card' },
+      createElement('h2', null, info.title),
+      createElement('p', null, info.description),
+      createElement('div', { className: 'homaye-tabesh-status active' }, 'فعال'),
+      createElement(
+        'p',
+        { style: { marginTop: '20px', color: '#666' } },
+        'این بخش در حال توسعه است و قابلیت‌های آن در نسخه‌های آینده اضافه خواهند شد.'
+      )
     );
   };
 
-  return (
-    <div className="homa-super-panel">
-      {getPageContent()}
-      
-      <div className="homaye-tabesh-card" style={{ marginTop: '20px' }}>
-        <h3>درباره سوپرپنل هما</h3>
-        <p>
-          سوپرپنل هما مرکز فرماندهی اصلی برای مدیریت تمامی جنبه‌های سیستم هوشمند است.
-          این پنل ابزارهای قدرتمندی برای مدیریت، نظارت و توسعه سیستم فراهم می‌کند.
-        </p>
-      </div>
-    </div>
+  return createElement(
+    'div',
+    { className: 'homa-super-panel' },
+    getPageContent(),
+    createElement(
+      'div',
+      { className: 'homaye-tabesh-card', style: { marginTop: '20px' } },
+      createElement('h3', null, 'درباره سوپرپنل هما'),
+      createElement(
+        'p',
+        null,
+        'سوپرپنل هما مرکز فرماندهی اصلی برای مدیریت تمامی جنبه‌های سیستم هوشمند است. این پنل ابزارهای قدرتمندی برای مدیریت، نظارت و توسعه سیستم فراهم می‌کند.'
+      )
+    )
   );
 };
 
