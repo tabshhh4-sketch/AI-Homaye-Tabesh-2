@@ -47,7 +47,7 @@ class AdminInterface
 
         // Check if hook starts with any of our plugin pages
         foreach ($pluginPages as $page) {
-            if (strpos($hook, $page) === 0 || strpos($hook, 'atlas-control-center') !== false || strpos($hook, 'homa-super-panel') !== false) {
+            if (strpos($hook, $page) === 0 || strpos($hook, 'atlas-control-center') !== false || strpos($hook, 'homa-super-panel') !== false || strpos($hook, 'homa-chatbot-settings') !== false) {
                 return true;
             }
         }
@@ -66,6 +66,9 @@ class AdminInterface
         wp_enqueue_script('wp-element');
         wp_enqueue_script('wp-components');
         wp_enqueue_script('wp-i18n');
+
+        // Enqueue color picker for settings page
+        wp_enqueue_script('wp-color-picker');
 
         // Check if built React app exists
         $reactAppPath = HOMAYE_TABESH_PATH . 'assets/dist/admin-app.js';
@@ -95,6 +98,9 @@ class AdminInterface
      */
     private function enqueueStyles(): void
     {
+        // Enqueue color picker styles
+        wp_enqueue_style('wp-color-picker');
+
         // Check if built CSS exists
         $cssPath = HOMAYE_TABESH_PATH . 'assets/dist/admin-app.css';
         if (file_exists($cssPath)) {
