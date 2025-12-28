@@ -5,6 +5,7 @@ namespace HomayeTabesh\Core;
 
 use HomayeTabesh\Admin\AtlasControlCenter\AtlasMenuHandler;
 use HomayeTabesh\Admin\HomaSuperPanel\HomaMenuHandler;
+use HomayeTabesh\Admin\ChatbotSettings\SettingsHandler;
 
 /**
  * Menu Manager
@@ -31,12 +32,20 @@ class MenuManager
     private HomaMenuHandler $homaHandler;
 
     /**
+     * Chatbot Settings handler
+     * 
+     * @var SettingsHandler
+     */
+    private SettingsHandler $settingsHandler;
+
+    /**
      * Constructor
      */
     public function __construct()
     {
         $this->atlasHandler = new AtlasMenuHandler();
         $this->homaHandler = new HomaMenuHandler();
+        $this->settingsHandler = new SettingsHandler();
     }
 
     /**
@@ -51,5 +60,8 @@ class MenuManager
 
         // Register Homa Super Panel menu
         $this->homaHandler->register();
+
+        // Register Chatbot Settings
+        $this->settingsHandler->register();
     }
 }

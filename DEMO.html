@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo: Homa Chatbot - Dual Workspace</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            transition: margin-left 0.3s ease-in-out;
+        }
+
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #4F46E5;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .subtitle {
+            color: #6B7280;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .demo-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: #F9FAFB;
+            border-radius: 12px;
+            border: 2px dashed #E5E7EB;
+        }
+
+        .demo-section h2 {
+            color: #1F2937;
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+
+        .demo-section p {
+            color: #6B7280;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .demo-button {
+            display: inline-block;
+            background: #4F46E5;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .demo-button:hover {
+            background: #4338CA;
+            transform: translateY(-2px);
+        }
+
+        .info-box {
+            background: #DBEAFE;
+            border-right: 4px solid #3B82F6;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .info-box h4 {
+            color: #1E40AF;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .info-box p {
+            color: #1E3A8A;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .tech-badge {
+            background: white;
+            color: #4F46E5;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 2px solid #4F46E5;
+        }
+
+        code {
+            background: #1F2937;
+            color: #10B981;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #6B7280;
+            font-size: 14px;
+            padding-top: 20px;
+            border-top: 1px solid #E5E7EB;
+        }
+
+        .screenshot-placeholder {
+            background: #F3F4F6;
+            border: 2px dashed #D1D5DB;
+            border-radius: 12px;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 20px;
+            color: #6B7280;
+        }
+
+        .screenshot-placeholder svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🤖 چتبات هما - محیط Dual-Workspace</h1>
+        <p class="subtitle">یک رابط چت هوشمند که به صورت موازی با محتوای سایت کار می‌کند</p>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>✨ Dual-Workspace</h3>
+                <p>کاربران می‌توانند همزمان با محتوای سایت و چتبات تعامل داشته باشند بدون اینکه نیاز به بستن یکی از آنها باشد.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🎯 Viewport Squeeze</h3>
+                <p>با باز شدن چتبات، محتوای سایت به صورت داینامیک فشرده می‌شود و تجربه بصری یکپارچه‌ای ایجاد می‌شود.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🎨 طراحی مدرن</h3>
+                <p>رابط کاربری مینیمال و مدرن الهام گرفته از ChatGPT با انیمیشن‌های روان و جذاب.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>⚙️ قابل تنظیم</h3>
+                <p>امکان شخصی‌سازی رنگ، موقعیت، عرض و سایر تنظیمات از پنل مدیریت وردپرس.</p>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>📋 ویژگی‌های اصلی</h2>
+            
+            <p><strong>1. آیکن شناور:</strong> یک دکمه شناور زیبا با انیمیشن pulse که در گوشه صفحه قرار دارد و با کلیک روی آن چتبات باز می‌شود.</p>
+            
+            <p><strong>2. سایدبار تعاملی:</strong> سایدباری که از سمت راست ظاهر می‌شود و شامل هدر، لیست پیام‌ها و ناحیه ورودی است.</p>
+            
+            <p><strong>3. Parallel Interaction:</strong> هر دو لایه (سایت اصلی و چتبات) به صورت کامل قابل تعامل هستند و <code>pointer-events</code> فعال می‌ماند.</p>
+            
+            <p><strong>4. مدیریت State:</strong> استفاده از Zustand برای مدیریت حالت چتبات و نگهداری تاریخچه مکالمات.</p>
+            
+            <p><strong>5. Responsive Design:</strong> سازگار با تمام اندازه‌های صفحه از موبایل تا دسکتاپ.</p>
+
+            <div class="info-box">
+                <h4>💡 نکته مهم</h4>
+                <p>این نسخه فقط شامل UI/UX است. قابلیت اتصال به هوش مصنوعی و پردازش پیام‌ها در PR های بعدی اضافه خواهد شد.</p>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🛠️ تکنولوژی‌های استفاده شده</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">React 18</span>
+                <span class="tech-badge">Zustand</span>
+                <span class="tech-badge">CSS Variables</span>
+                <span class="tech-badge">Webpack 5</span>
+                <span class="tech-badge">WordPress</span>
+                <span class="tech-badge">PHP 8.2</span>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>📸 نحوه استفاده</h2>
+            <p>پس از نصب و فعال‌سازی افزونه در وردپرس:</p>
+            
+            <ol style="margin-right: 20px; color: #4B5563; line-height: 2;">
+                <li>یک آیکن شناور در گوشه صفحه نمایش داده می‌شود</li>
+                <li>با کلیک روی آیکن، چتبات از سمت راست باز می‌شود</li>
+                <li>محتوای سایت به سمت چپ منتقل می‌شود (Viewport Squeeze)</li>
+                <li>می‌توانید همزمان در سایت و چتبات کار کنید</li>
+                <li>با کلیک روی دکمه بستن، چتبات بسته و محتوا به حالت اول برمی‌گردد</li>
+            </ol>
+
+            <div class="screenshot-placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p><strong>اسکرین‌شات چتبات در محیط وردپرس</strong></p>
+                <p style="font-size: 12px; margin-top: 8px;">پس از نصب افزونه، این بخش شامل تصاویر واقعی خواهد بود</p>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>⚙️ تنظیمات</h2>
+            <p>برای دسترسی به تنظیمات چتبات:</p>
+            <p><strong>مرکز کنترل اطلس → تنظیمات چتبات</strong></p>
+            
+            <ul style="margin-right: 20px; color: #4B5563; line-height: 2; margin-top: 16px;">
+                <li>فعال/غیرفعال کردن چتبات</li>
+                <li>انتخاب موقعیت آیکن (چپ/راست)</li>
+                <li>تنظیم رنگ آیکن با Color Picker</li>
+                <li>تنظیم عرض سایدبار (300-600 پیکسل)</li>
+                <li>تغییر متن خوش‌آمدگویی</li>
+                <li>تغییر متن Placeholder</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <button class="demo-button" onclick="alert('این یک نسخه Demo است. برای استفاده واقعی، افزونه را در وردپرس نصب کنید.')">
+                مشاهده در وردپرس
+            </button>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Homaye Tabesh Team | <a href="https://github.com/tabshhh4-sketch/AI-Homaye-Tabesh-2" style="color: #4F46E5;">GitHub Repository</a></p>
+        </div>
+    </div>
+</body>
+</html>
