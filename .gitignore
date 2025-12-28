@@ -2,8 +2,7 @@
 /vendor/
 node_modules/
 
-# Build files
-/assets/dist/
+# Build files (keep dist/ for deployment)
 /assets/build/
 *.map
 
