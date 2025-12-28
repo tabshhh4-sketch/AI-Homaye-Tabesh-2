@@ -1,0 +1,28 @@
+{
+  "name": "homaye-tabesh-admin",
+  "version": "1.0.0",
+  "description": "React admin interface for Homaye Tabesh plugin",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "lint": "eslint assets/js/src"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "@babel/preset-react": "^7.22.0",
+    "@wordpress/scripts": "^26.0.0",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.50.0",
+    "eslint-plugin-react": "^7.33.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
