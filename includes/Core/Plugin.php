@@ -35,6 +35,13 @@ final class Plugin
     private ?AdminInterface $adminInterface = null;
 
     /**
+     * Frontend chatbot handler
+     * 
+     * @var \HomayeTabesh\Frontend\ChatbotHandler|null
+     */
+    private ?\HomayeTabesh\Frontend\ChatbotHandler $chatbotHandler = null;
+
+    /**
      * Private constructor to prevent direct instantiation
      */
     private function __construct()
@@ -69,6 +76,9 @@ final class Plugin
 
         // Initialize admin interface
         $this->adminInterface = new AdminInterface();
+
+        // Initialize frontend chatbot
+        $this->chatbotHandler = new \HomayeTabesh\Frontend\ChatbotHandler();
     }
 
     /**
