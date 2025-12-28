@@ -1,0 +1,36 @@
+# Dependencies
+/vendor/
+node_modules/
+
+# Build files (keep dist/ for deployment)
+/assets/build/
+*.map
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Composer
+composer.lock

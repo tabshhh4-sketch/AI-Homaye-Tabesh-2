@@ -1,0 +1,23 @@
+{
+    "name": "homaye-tabesh/ai-homaye-tabesh",
+    "description": "افزونه‌ای میانلایه، ماژولار و هدایتگر کاربران، قدرتگرفته از هوش مصنوعی",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Homaye Tabesh Team"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "HomayeTabesh\\": "includes/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
